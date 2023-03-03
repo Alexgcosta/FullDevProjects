@@ -6,17 +6,14 @@ namespace Xpto.Core.Customers
     {
         public void Load()
         {
-            App.Customers = new List<Customer>();
+            AppHelpers.Customers = new List<Customer>();
 
             var dir = Directory.GetCurrentDirectory() + "\\db";
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
             var path = dir + "\\customer.json";
-
-
-
-            App.Customers = JsonSerializer.Deserialize<IList<Customer>>(File.ReadAllText(path))!;
+            AppHelpers.Customers = JsonSerializer.Deserialize<IList<Customer>>(File.ReadAllText(path))!;
         }
 
         public void Save()
@@ -25,7 +22,7 @@ namespace Xpto.Core.Customers
             var path = dir + "\\customer.json";
 
             var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize(App.Customers, options);
+            string json = JsonSerializer.Serialize(AppHelpers.Customers, options);
             File.WriteAllText(path, json);
         }
     }

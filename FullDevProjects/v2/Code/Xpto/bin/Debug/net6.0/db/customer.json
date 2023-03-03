@@ -1,53 +1,5 @@
 [
   {
-    "Id": "ef6b1049-4eef-4ba4-b54f-ca3277f43587",
-    "Code": 1,
-    "Name": "asdasda",
-    "Nickname": null,
-    "BirthDate": "2000-10-10T00:00:00",
-    "PersonType": "pf",
-    "Identity": "295.297.028-92",
-    "Addresses": [
-      {
-        "Id": "ddea818f-0e0c-4d79-a923-807dd1c13ad0",
-        "Type": null,
-        "Street": null,
-        "Number": null,
-        "Complement": null,
-        "District": null,
-        "City": null,
-        "State": null,
-        "ZipCode": null,
-        "Note": null
-      }
-    ],
-    "Phones": [
-      {
-        "Id": "42422cab-207e-47ed-80f7-8ef05308e475",
-        "Type": null,
-        "Ddd": 0,
-        "Number": 1122002222,
-        "Note": null
-      }
-    ],
-    "Emails": [
-      {
-        "Id": "479e6b97-3be5-468b-abb0-e6b8b3859abc",
-        "Type": null,
-        "Address": "asdas",
-        "Note": null
-      }
-    ],
-    "Note": "",
-    "CreationDate": "0001-01-01T00:00:00",
-    "CreationUserId": "00000000-0000-0000-0000-000000000000",
-    "CreationUserName": null,
-    "ChangeDate": null,
-    "ChangeUserId": "00000000-0000-0000-0000-000000000000",
-    "ChangeUserName": null,
-    "cep": null
-  },
-  {
     "Id": "f55a2a0b-6c0e-4054-a54f-9e2f3dd64cf8",
     "Code": 2,
     "Name": "asdasdas",
@@ -129,54 +81,6 @@
     "Emails": [
       {
         "Id": "535b9235-03f2-4ca0-adaf-69d48d972f0f",
-        "Type": null,
-        "Address": "",
-        "Note": null
-      }
-    ],
-    "Note": "",
-    "CreationDate": "0001-01-01T00:00:00",
-    "CreationUserId": "00000000-0000-0000-0000-000000000000",
-    "CreationUserName": null,
-    "ChangeDate": null,
-    "ChangeUserId": "00000000-0000-0000-0000-000000000000",
-    "ChangeUserName": null,
-    "cep": null
-  },
-  {
-    "Id": "3eb42f89-4604-44a0-aed0-f02a3d36070c",
-    "Code": 5,
-    "Name": "asdas",
-    "Nickname": null,
-    "BirthDate": "2000-10-10T00:00:00",
-    "PersonType": "pf",
-    "Identity": "295.297.028-92",
-    "Addresses": [
-      {
-        "Id": "9f8faaf6-cb1b-43b4-86be-ff86ced140fd",
-        "Type": null,
-        "Street": "Rua Jos\u00E9 Ces\u00E1rio Mendes",
-        "Number": "122",
-        "Complement": "",
-        "District": "Vila No\u00EAmia",
-        "City": "Mau\u00E1",
-        "State": "SP",
-        "ZipCode": "09370600",
-        "Note": null
-      }
-    ],
-    "Phones": [
-      {
-        "Id": "0fbc465f-32a8-4667-8441-9c5fb2150ab0",
-        "Type": null,
-        "Ddd": 0,
-        "Number": 119999000,
-        "Note": null
-      }
-    ],
-    "Emails": [
-      {
-        "Id": "9def1719-d861-482b-b0ee-dd4f6b5b6faa",
         "Type": null,
         "Address": "",
         "Note": null
@@ -275,54 +179,6 @@
         "Id": "ebcf18e8-9e02-417d-b1bd-d391a9384899",
         "Type": null,
         "Address": "alexgcosta81@gmail.com",
-        "Note": null
-      }
-    ],
-    "Note": "",
-    "CreationDate": "0001-01-01T00:00:00",
-    "CreationUserId": "00000000-0000-0000-0000-000000000000",
-    "CreationUserName": null,
-    "ChangeDate": null,
-    "ChangeUserId": "00000000-0000-0000-0000-000000000000",
-    "ChangeUserName": null,
-    "cep": null
-  },
-  {
-    "Id": "65c21997-c715-49f0-9fcd-eb8809184f11",
-    "Code": 11,
-    "Name": "asdas",
-    "Nickname": null,
-    "BirthDate": "2000-10-10T00:00:00",
-    "PersonType": "pf",
-    "Identity": "295.297.028-92",
-    "Addresses": [
-      {
-        "Id": "1c4a52e8-3cb4-4edb-a132-2cbc2db9d926",
-        "Type": null,
-        "Street": "Rua Jos\u00E9 Ces\u00E1rio Mendes",
-        "Number": "122",
-        "Complement": "",
-        "District": "Vila No\u00EAmia",
-        "City": "Mau\u00E1",
-        "State": "SP",
-        "ZipCode": "09370600",
-        "Note": null
-      }
-    ],
-    "Phones": [
-      {
-        "Id": "7419a5f7-4d72-466f-9ae1-d9578930d28a",
-        "Type": null,
-        "Ddd": 0,
-        "Number": 11220000,
-        "Note": null
-      }
-    ],
-    "Emails": [
-      {
-        "Id": "861e6f30-f865-41c0-af1f-2d741063dff2",
-        "Type": null,
-        "Address": "",
         "Note": null
       }
     ],
@@ -471,6 +327,54 @@
       }
     ],
     "Note": "",
+    "CreationDate": "0001-01-01T00:00:00",
+    "CreationUserId": "00000000-0000-0000-0000-000000000000",
+    "CreationUserName": null,
+    "ChangeDate": null,
+    "ChangeUserId": "00000000-0000-0000-0000-000000000000",
+    "ChangeUserName": null,
+    "cep": null
+  },
+  {
+    "Id": "bd141cf6-a362-43a7-8e94-80151b12232d",
+    "Code": 1,
+    "Name": "Alex",
+    "Nickname": null,
+    "BirthDate": null,
+    "PersonType": "pg",
+    "Identity": "295.297.028-92",
+    "Addresses": [
+      {
+        "Id": "df7ccf2f-cfda-42b3-b6b1-d1b423b05631",
+        "Type": null,
+        "Street": "Rua Jos\u00E9 Ces\u00E1rio Mendes",
+        "Number": "",
+        "Complement": "1",
+        "District": "Vila No\u00EAmia",
+        "City": "Mau\u00E1",
+        "State": "SP",
+        "ZipCode": "09370600",
+        "Note": null
+      }
+    ],
+    "Phones": [
+      {
+        "Id": "b6e5d5fa-17b2-4eb9-b0ae-3f2bf02e69cd",
+        "Type": null,
+        "Ddd": 0,
+        "Number": 112222222,
+        "Note": null
+      }
+    ],
+    "Emails": [
+      {
+        "Id": "f795ec1b-6b6c-4b59-b502-023bee9c852f",
+        "Type": null,
+        "Address": "asdas",
+        "Note": null
+      }
+    ],
+    "Note": "asdasdas",
     "CreationDate": "0001-01-01T00:00:00",
     "CreationUserId": "00000000-0000-0000-0000-000000000000",
     "CreationUserName": null,

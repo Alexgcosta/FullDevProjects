@@ -1,4 +1,3 @@
 ﻿
 using Xpto.Core;
-
-App.Init();
+AppHelpers.Init();

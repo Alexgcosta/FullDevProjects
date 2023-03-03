@@ -22,6 +22,7 @@ namespace Xpto.Core.Customers
         public Guid ChangeUserId { get; set; }
         public string ChangeUserName { get; set; }
         public string cep { get; set; }
+       
 
         public Customer()
         {

@@ -14,28 +14,33 @@ namespace Xpto.Core.Customers
     {
         public static void List()
         {
-            App.Clear();
+            AppHelpers.Clear();
             Console.WriteLine("Lista de Clientes");
 
-            if (App.Customers.Count == 1)
+            if (AppHelpers.Customers.Count == 1)
                 Console.WriteLine("1 registro encontrado");
-            else if (App.Customers.Count > 1)
-                Console.WriteLine("{0} registros encontrados", App.Customers.Count);
+            else if (AppHelpers.Customers.Count > 1)
+                Console.WriteLine("{0} registros encontrados", AppHelpers.Customers.Count);
             else
                 Console.WriteLine("nenhum registro encontrado");
 
             Console.WriteLine();
             Console.WriteLine("Lista de Clientes");
+            Console.ForegroundColor= ConsoleColor.Blue;
             Console.WriteLine(("").PadRight(100, '-'));
+            Console.ResetColor();
             Console.WriteLine("CÓDIGO".PadRight(10, ' ') + "| NOME");
 
-            foreach (var customer in App.Customers)
+            foreach (var customer in AppHelpers.Customers)
             {
+                Console.ForegroundColor= ConsoleColor.Blue;
                 Console.WriteLine(("").PadRight(100, '-'));
+                Console.ResetColor();   
                 Console.WriteLine($"{customer.Code,-10}| {customer.Name}");
             }
-
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine(("").PadRight(100, '-'));
+            Console.ResetColor();
 
             Console.WriteLine();
             Console.WriteLine("0 - Voltar");
@@ -52,8 +57,10 @@ namespace Xpto.Core.Customers
 
         public static void Select()
         {
-            App.Clear();
+            AppHelpers.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Consulta de Cliente");
+            Console.ResetColor();
             Console.WriteLine();
             Console.Write("Informe o código do cliente ou 0 para sair: ");
 
@@ -64,11 +71,11 @@ namespace Xpto.Core.Customers
                 if (code == 0)
                     return;
 
-                var customer = App.Customers.FirstOrDefault(x => x.Code == code);
+                var customer = AppHelpers.Customers.FirstOrDefault(x => x.Code == code);
 
                 if (customer == null)
                 {
-                    App.Clear();
+                    AppHelpers.Clear();
                     Console.WriteLine("Consulta de Cliente");
                     Console.WriteLine();
                     Console.ResetColor();
@@ -78,14 +85,17 @@ namespace Xpto.Core.Customers
                 }
                 else
                 {
-                    App.Clear();
+                    AppHelpers.Clear();
                     Console.WriteLine("Consulta de Cliente");
                     Console.WriteLine();
 
-
+                    Console.ForegroundColor= ConsoleColor.Blue;
                     Console.WriteLine(("").PadRight(100, '-'));
+                    Console.ResetColor();
                     Console.WriteLine("Cliente Selecionado");
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine(("").PadRight(100, '-'));
+                    Console.ResetColor();
 
                     Console.WriteLine("Código: {0}", customer.Code);
                     Console.WriteLine("Nome: {0}", customer.Name);
@@ -144,7 +154,9 @@ namespace Xpto.Core.Customers
 
 
                     Console.WriteLine("Observação: {0}", customer.Note);
+                    Console.ForegroundColor= ConsoleColor.Blue;
                     Console.WriteLine(("").PadRight(100, '-'));
+                    Console.ResetColor();
                 }
 
                 Console.WriteLine();
@@ -154,7 +166,7 @@ namespace Xpto.Core.Customers
 
         public static void Create()
         {
-            App.Clear();
+            AppHelpers.Clear();
 
             Console.WriteLine("Novo Cliente");
             Console.WriteLine();
@@ -231,6 +243,7 @@ namespace Xpto.Core.Customers
 
             return true;
         }
+            customer.Identity = cpfUsuario;
 
 
             if (customer.PersonType?.ToUpper() == "PF")
@@ -265,11 +278,11 @@ namespace Xpto.Core.Customers
             string confirmar = Console.ReadLine();
             string cep;
 
-            if (confirmar.Equals("S"))
+            if (confirmar.Equals("S", StringComparison.Ordinal))
             {
                 while (true)
                 {
-                    Console.Write("Informe o CEP ou 0 para  adicionar o endereço manualmente");
+                    Console.Write("Informe o CEP ou 0 para adicionar o endereço ");
                     Console.WriteLine();
                     cep = Console.ReadLine();
 
@@ -318,22 +331,22 @@ namespace Xpto.Core.Customers
             {
                 Console.Write("Logradouro:");
                 address.Street = Console.ReadLine();
-                Console.WriteLine();
+                
                 Console.Write("Número:");
                 address.Number = Console.ReadLine();
-                Console.WriteLine();
+                
                 Console.Write("Complemento:");
                 address.Complement = Console.ReadLine();
-                Console.WriteLine();
+                
                 Console.Write("Bairro:");
                 address.District = Console.ReadLine();
-                Console.WriteLine();
+                
                 Console.Write("Cidade:");
                 address.City = Console.ReadLine();
-                Console.WriteLine();
+               
                 Console.Write("Estado:");
                 address.State = Console.ReadLine();
-                Console.WriteLine();
+                
                 Console.Write("CEP:");
                 address.ZipCode = Console.ReadLine();
             }
@@ -360,7 +373,7 @@ namespace Xpto.Core.Customers
             customer.Note = Console.ReadLine();
 
             customer.CreationDate = new DateTime();
-            App.Customers.Add(customer);
+            AppHelpers.Customers.Add(customer);
 
 
             var customerRepository = new CustomerRepository();
@@ -388,8 +401,10 @@ namespace Xpto.Core.Customers
 
         public void Edit()
         {
-            App.Clear();
+            AppHelpers.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Atualização de Cliente");
+            Console.ResetColor();
             Console.WriteLine();
             Console.Write("Informe o código do cliente ou 0 para sair: ");
 
@@ -400,11 +415,11 @@ namespace Xpto.Core.Customers
                 if (code == 0)
                     return;
 
-                var customer = App.Customers.FirstOrDefault(x => x.Code == code);
+                var customer = AppHelpers.Customers.FirstOrDefault(x => x.Code == code);
 
                 if (customer == null)
                 {
-                    App.Clear();
+                    AppHelpers.Clear();
                     Console.WriteLine("Atualização de Cliente");
                     Console.WriteLine();
                     Console.ResetColor();
@@ -414,7 +429,7 @@ namespace Xpto.Core.Customers
                 }
                 else
                 {
-                    App.Clear();
+                    AppHelpers.Clear();
                     Console.WriteLine("Atualização de Cliente");
                     Console.WriteLine();
 
@@ -470,21 +485,13 @@ namespace Xpto.Core.Customers
                                 }
                                 else
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.Write("Data de Nascimento inválida:");
+                                    Console.ResetColor();
                                 }
                             }
                         }
                     }
-
-                    //Console.WriteLine("Endereço: {0}", customer.Address);
-                    //text = Console.ReadLine();
-                    //if (text != "")
-                    //    customer.Address = text;
-
-                    //Console.WriteLine("E-mail: {0}", customer.Email);
-                    //text = Console.ReadLine();
-                    //if (text != "")
-                    //    customer.Email = text;
 
                     Console.WriteLine("Observação: {0}", customer.Note);
                     text = Console.ReadLine();
@@ -509,8 +516,10 @@ namespace Xpto.Core.Customers
 
         public static void Delete()
         {
-            App.Clear();
+            AppHelpers.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Excluir de Cliente");
+            Console.ResetColor();
             Console.WriteLine();
             Console.Write("Informe o código do cliente ou 0 para sair: ");
 
@@ -521,11 +530,11 @@ namespace Xpto.Core.Customers
                 if (code == 0)
                     return;
 
-                var customer = App.Customers.FirstOrDefault(x => x.Code == code);
+                var customer = AppHelpers.Customers.FirstOrDefault(x => x.Code == code);
 
                 if (customer == null)
                 {
-                    App.Clear();
+                    AppHelpers.Clear();
                     Console.WriteLine("Excluir de Cliente");
                     Console.WriteLine();
                     Console.ResetColor();
@@ -535,28 +544,35 @@ namespace Xpto.Core.Customers
                 }
                 else
                 {
-                    App.Clear();
+                    AppHelpers.Clear();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Excluir de Cliente");
+                    Console.ResetColor();
                     Console.WriteLine();
-
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine(("").PadRight(100, '-'));
+                    Console.ResetColor();
                     Console.WriteLine("Código: {0}", customer.Code);
                     Console.WriteLine("Nome: {0}", customer.Name);
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine(("").PadRight(100, '-'));
+                    Console.ResetColor();
                     Console.WriteLine();
                     Console.Write("Deseja excluir o cliente? (S - Sim, N - Não):");
                     var result = Console.ReadLine();
                     if (result?.ToUpper() == "S")
                     {
-                        App.Customers.Remove(customer);
+                        AppHelpers.Customers.Remove(customer);
 
                         var customerRepository = new CustomerRepository();
                         customerRepository.Save();
 
-                        App.Clear();
+                        AppHelpers.Clear();
                         Console.WriteLine("Excluir de Cliente");
                         Console.WriteLine();
+                        Console.ForegroundColor= ConsoleColor.Green;
                         Console.WriteLine("Cliente exluído com sucesso");
+                        Console.ResetColor();
                     }
                 }
 
